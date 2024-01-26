@@ -1,5 +1,5 @@
 # Rain Hedge
-Hedging implementation to bound errors in rain probability prediction. 
+This is a hedging implementation to bound errors in rain probability prediction.
 
 ## Problem Statement
 
@@ -15,4 +15,18 @@ The solution's total cost is at most 100 more than the cost of the best expert, 
 \begin{align*}
 \sum^{T}_{t=1}|p^{(t)} - y^{(t)} \leq 100 + \min_{j \in [N]} \sum^{T}_{t=1}|x_j^{(t)} - y^{(t)}|
 \end{align*}
+```
+
+## Hedging Algorithm
+The Hedge strategy is as followed:
+
+Initially, assign each expert $i$ a weight $w^{(1)}_i$ of 1. (All experts are equally trustworthy in the beginning.)
+
+At each time $t$:
+
+```math
+\begin{itemize}
+\item Pick the distribution $p^{(t)}_i = w^{(t)}_i$ / \phi^{(t)}$ where $\phi^{(t)} = \sum_{i \in \[N\]} w^{(t)}_i$ \\
+\item After observing the cost vector, set $w^{(t+1)}_i = w^{(t)}_i \cdot e^{−\epsilon \cdot m^{(t)}_i} .
+\end{itemize}
 ```
