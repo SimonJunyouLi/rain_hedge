@@ -34,4 +34,4 @@ From the above strategy, we have that for $\epsilon \leq 1$ and for $t \in [T]$,
 \sum^T_{t=1} {\vec p}^{(t)} \cdot {\vec m}^{(t)} \leq \sum^T_{t=1} m_i^{(t)} + \frac{\ln N}{\epsilon} + \epsilon T
 ```
 
-We can manipulate the value of $\epsilon$ to achieve the desired error bounds. 
+At last, we can manipulate the value of $\epsilon$ to achieve the desired error bounds. 
