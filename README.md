@@ -25,8 +25,6 @@ Initially, assign each expert $i$ a weight $w^{(1)}_i$ of 1. (All experts are eq
 At each time $t$:
 
 ```math 
-\begin{itemize}
-- Pick the distribution $p^{(t)}_i = w^{(t)}_i$ / \phi^{(t)}$ where $\phi^{(t)} = \sum_{i \in \[N\]} w^{(t)}_i$ \\
--  After observing the cost vector, set $w^{(t+1)}_i = w^{(t)}_i \cdot e^{−\epsilon \cdot m^{(t)}_i} .
-\end{itemize}
+- \text{Pick the distribution} p^{(t)}_i = w^{(t)}_i / \phi^{(t)} \text{where} \phi^{(t)} = \sum_{i \in \[N\]} w^{(t)}_i \\
+-  \text{After observing the cost vector, set} w^{(t+1)}_i = w^{(t)}_i \cdot e^{−\epsilon \cdot m^{(t)}_i}
 ```
