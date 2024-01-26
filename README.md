@@ -1,5 +1,5 @@
 # Rain Hedge
-This is a hedging implementation to bound errors in rain probability prediction.
+This is a hedging implementation to bound rain probability prediction errors.
 
 ## Problem Statement
 
