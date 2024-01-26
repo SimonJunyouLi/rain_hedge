@@ -28,3 +28,9 @@ At each time $t$:
 
 -  After observing the cost vector, set $w^{(t+1)}_i = w^{(t)}_i \cdot e^{−\epsilon \cdot m^{(t)}_i}$
 
+From the above strategy, we have that for $\epsilon \leq 1$ and for $t \in [T]$, ${\vec p}^{(t)}$ is picked by Hedge. Then, for any expert $i$, 
+
+```math
+\sum^T_{t=1} {\vec p}^{(t)} \cdot {\vec m}^{(t)} \leq \sum^T_{t=1} m_i^{(t)} + \frac{\ln N}{\epsilon} + \epsilon T
+```
+
